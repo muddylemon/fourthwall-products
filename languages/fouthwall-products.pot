@@ -1,0 +1,193 @@
+# Copyright (C) 2025 Your Name
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Fourthwall Products 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fourthwall-products\n"
+"POT-Creation-Date: 2025-01-26 12:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-settings.php:53
+msgid "Fourthwall Products Settings"
+msgstr ""
+
+#: includes/class-settings.php:54
+msgid "Fourthwall Products"
+msgstr ""
+
+#: includes/class-settings.php:136
+msgid "API Settings"
+msgstr ""
+
+#: includes/class-settings.php:144
+msgid "Display Settings"
+msgstr ""
+
+#: includes/class-settings.php:152
+msgid "Storefront Token"
+msgstr ""
+
+#: includes/class-settings.php:160
+msgid "Default Currency"
+msgstr ""
+
+#: includes/class-settings.php:168
+msgid "Cache Duration (seconds)"
+msgstr ""
+
+#: includes/class-settings.php:213
+msgid "Settings Saved"
+msgstr ""
+
+#: includes/class-settings.php:247
+msgid "Tools"
+msgstr ""
+
+#: includes/class-settings.php:252
+msgid "Test API Connection"
+msgstr ""
+
+#: includes/class-settings.php:261
+msgid "Clear Cache"
+msgstr ""
+
+#: includes/class-settings.php:278
+msgid "Configure your Fourthwall API settings. You can find your storefront token in your Fourthwall dashboard."
+msgstr ""
+
+#: includes/class-settings.php:289
+msgid "Configure how products are displayed on your site."
+msgstr ""
+
+#: includes/class-settings.php:308
+msgid "Enter your Fourthwall storefront token"
+msgstr ""
+
+#: includes/class-settings.php:334
+msgid "Select the default currency for product prices"
+msgstr ""
+
+#: includes/class-settings.php:355
+msgid "How long to cache API responses (in seconds)"
+msgstr ""
+
+#: includes/class-product-widget.php:31
+msgid "Display Fourthwall products from a collection"
+msgstr ""
+
+#: includes/class-product-widget.php:185
+msgid "Title:"
+msgstr ""
+
+#: includes/class-product-widget.php:196
+msgid "Collection:"
+msgstr ""
+
+#: includes/class-product-widget.php:201
+msgid "Select a collection"
+msgstr ""
+
+#: includes/class-product-widget.php:220
+msgid "Currency:"
+msgstr ""
+
+#: includes/class-product-widget.php:241
+msgid "Layout:"
+msgstr ""
+
+#: includes/class-product-widget.php:248
+msgid "Grid"
+msgstr ""
+
+#: includes/class-product-widget.php:251
+msgid "List"
+msgstr ""
+
+#: includes/class-product-widget.php:258
+msgid "Columns (Grid layout):"
+msgstr ""
+
+#: includes/class-product-widget.php:277
+msgid "Number of products:"
+msgstr ""
+
+#: includes/class-product-widget.php:291
+msgid "Custom CSS Class:"
+msgstr ""
+
+#: templates/widget-template.php:27
+msgid "No products found."
+msgstr ""
+
+#: templates/widget-template.php:108
+msgid "Save %d%%"
+msgstr ""
+
+#: templates/widget-template.php:165
+msgid "Only %d left in stock"
+msgstr ""
+
+#: templates/widget-template.php:186
+msgid "Load more products"
+msgstr ""
+
+#: includes/class-api-client.php:166
+msgid "US Dollar"
+msgstr ""
+
+#: includes/class-api-client.php:167
+msgid "Euro"
+msgstr ""
+
+#: includes/class-api-client.php:168
+msgid "Canadian Dollar"
+msgstr ""
+
+#: includes/class-api-client.php:169
+msgid "British Pound"
+msgstr ""
+
+#: includes/class-api-client.php:170
+msgid "Australian Dollar"
+msgstr ""
+
+#: includes/class-api-client.php:171
+msgid "New Zealand Dollar"
+msgstr ""
+
+#: includes/class-api-client.php:172
+msgid "Swedish Krona"
+msgstr ""
+
+#: includes/class-api-client.php:173
+msgid "Norwegian Krone"
+msgstr ""
+
+#: includes/class-api-client.php:174
+msgid "Danish Krone"
+msgstr ""
+
+#: includes/class-api-client.php:175
+msgid "Polish Złoty"
+msgstr ""
+
+#: includes/class-api-client.php:176
+msgid "Indian Rupee"
+msgstr ""
+
+#: includes/class-api-client.php:177
+msgid "Japanese Yen"
+msgstr ""
+
+#: includes/class-api-client.php:178
+msgid "Malaysian Ringgit"
+msgstr ""
+
+#: includes/class-api-client.php:179
+msgid "Singapore Dollar"
+msgstr ""

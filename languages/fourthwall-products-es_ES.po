@@ -1,0 +1,151 @@
+# Copyright (C) 2025 Your Name
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Fourthwall Products 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/fourthwall-products\n"
+"POT-Creation-Date: 2025-01-26 12:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-26 12:00:00+00:00\n"
+"Last-Translator: Your Name <your.email@example.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+msgid "Fourthwall Products Settings"
+msgstr "Configuración de Productos Fourthwall"
+
+msgid "Fourthwall Products"
+msgstr "Productos Fourthwall"
+
+msgid "API Settings"
+msgstr "Configuración de API"
+
+msgid "Display Settings"
+msgstr "Configuración de Visualización"
+
+msgid "Storefront Token"
+msgstr "Token de Tienda"
+
+msgid "Default Currency"
+msgstr "Moneda Predeterminada"
+
+msgid "Cache Duration (seconds)"
+msgstr "Duración de Caché (segundos)"
+
+msgid "Settings Saved"
+msgstr "Configuración Guardada"
+
+msgid "Tools"
+msgstr "Herramientas"
+
+msgid "Test API Connection"
+msgstr "Probar Conexión API"
+
+msgid "Clear Cache"
+msgstr "Limpiar Caché"
+
+msgid "Configure your Fourthwall API settings. You can find your storefront token in your Fourthwall dashboard."
+msgstr "Configure sus ajustes de API de Fourthwall. Puede encontrar su token de tienda en su panel de Fourthwall."
+
+msgid "Configure how products are displayed on your site."
+msgstr "Configure cómo se muestran los productos en su sitio."
+
+msgid "Enter your Fourthwall storefront token"
+msgstr "Ingrese su token de tienda Fourthwall"
+
+msgid "Select the default currency for product prices"
+msgstr "Seleccione la moneda predeterminada para los precios de productos"
+
+msgid "How long to cache API responses (in seconds)"
+msgstr "Cuánto tiempo almacenar en caché las respuestas de la API (en segundos)"
+
+msgid "Display Fourthwall products from a collection"
+msgstr "Mostrar productos Fourthwall de una colección"
+
+msgid "Title:"
+msgstr "Título:"
+
+msgid "Collection:"
+msgstr "Colección:"
+
+msgid "Select a collection"
+msgstr "Seleccionar una colección"
+
+msgid "Currency:"
+msgstr "Moneda:"
+
+msgid "Layout:"
+msgstr "Diseño:"
+
+msgid "Grid"
+msgstr "Cuadrícula"
+
+msgid "List"
+msgstr "Lista"
+
+msgid "Columns (Grid layout):"
+msgstr "Columnas (diseño de cuadrícula):"
+
+msgid "Number of products:"
+msgstr "Número de productos:"
+
+msgid "Custom CSS Class:"
+msgstr "Clase CSS Personalizada:"
+
+msgid "No products found."
+msgstr "No se encontraron productos."
+
+msgid "Save %d%%"
+msgstr "Ahorre %d%%"
+
+msgid "Only %d left in stock"
+msgstr "Solo quedan %d en existencia"
+
+msgid "Load more products"
+msgstr "Cargar más productos"
+
+msgid "US Dollar"
+msgstr "Dólar Estadounidense"
+
+msgid "Euro"
+msgstr "Euro"
+
+msgid "Canadian Dollar"
+msgstr "Dólar Canadiense"
+
+msgid "British Pound"
+msgstr "Libra Esterlina"
+
+msgid "Australian Dollar"
+msgstr "Dólar Australiano"
+
+msgid "New Zealand Dollar"
+msgstr "Dólar Neozelandés"
+
+msgid "Swedish Krona"
+msgstr "Corona Sueca"
+
+msgid "Norwegian Krone"
+msgstr "Corona Noruega"
+
+msgid "Danish Krone"
+msgstr "Corona Danesa"
+
+msgid "Polish Złoty"
+msgstr "Złoty Polaco"
+
+msgid "Indian Rupee"
+msgstr "Rupia India"
+
+msgid "Japanese Yen"
+msgstr "Yen Japonés"
+
+msgid "Malaysian Ringgit"
+msgstr "Ringgit Malayo"
+
+msgid "Singapore Dollar"
+msgstr "Dólar de Singapur"

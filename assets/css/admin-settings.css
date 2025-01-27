@@ -1,0 +1,230 @@
+/**
+ * Fourthwall Products Admin Styles
+ */
+
+/* Settings Page Layout */
+.fourthwall-settings-wrap {
+    max-width: 960px;
+    margin: 20px 0;
+}
+
+.fourthwall-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+.fourthwall-field-row {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fourthwall-field-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.fourthwall-field-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.fourthwall-field-description {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+/* Token Input */
+#fourthwall_storefront_token {
+    font-family: monospace;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.fourthwall-invalid {
+    border-color: #dc3232 !important;
+    box-shadow: 0 0 2px rgba(220,50,50,.8) !important;
+}
+
+.fourthwall-token-error {
+    color: #dc3232;
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Tools Section */
+.fourthwall-tools {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.fourthwall-tools h2 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.fourthwall-tool-section {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.fourthwall-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fourthwall-button:hover {
+    background: #135e96;
+}
+
+.fourthwall-button:disabled {
+    background: #c3c4c7;
+    cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner.is-active {
+    visibility: visible;
+    margin: 0 10px;
+}
+
+/* Status Messages */
+.fourthwall-success,
+.fourthwall-error {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.fourthwall-success {
+    background: #edfaef;
+    color: #0a5624;
+    border: 1px solid #68de7c;
+}
+
+.fourthwall-error {
+    background: #fcf0f1;
+    color: #cc1818;
+    border: 1px solid #ffabaf;
+}
+
+/* Cache Duration Field */
+#fourthwall_cache_duration {
+    width: 100px;
+}
+
+/* Currency Select */
+#fourthwall_default_currency {
+    min-width: 200px;
+}
+
+/* Tooltips */
+.fourthwall-tooltip {
+    color: #666;
+    cursor: help;
+    margin-left: 5px;
+}
+
+.ui-tooltip {
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+    max-width: 300px;
+    background: #333;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 782px) {
+    .fourthwall-tool-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .fourthwall-field-row {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    #fourthwall_storefront_token {
+        max-width: 100%;
+    }
+}
+
+/* Settings Tabs */
+.fourthwall-settings-tabs {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 2px;
+}
+
+.fourthwall-tab {
+    padding: 10px 20px;
+    background: #f0f0f1;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-bottom: -1px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.fourthwall-tab.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* Settings Sections */
+.fourthwall-settings-section {
+    display: none;
+}
+
+.fourthwall-settings-section.active {
+    display: block;
+}
+
+/* Debug Information */
+.fourthwall-debug-info {
+    background: #f6f7f7;
+    padding: 15px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.fourthwall-debug-info pre {
+    margin: 0;
+    overflow: auto;
+    max-height: 200px;
+    font-size: 12px;
+}
