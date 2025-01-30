@@ -14,7 +14,8 @@ if (!defined('ABSPATH')) {
  * 
  * Handles all API interactions with the Fourthwall Storefront API
  */
-class Fourthwall_API_Client {
+class Fourthwall_API_Client
+{
     /**
      * API base URL
      *
@@ -39,7 +40,8 @@ class Fourthwall_API_Client {
     /**
      * Constructor
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->cache_duration = get_option('fourthwall_cache_duration', 3600);
     }
 
@@ -48,7 +50,8 @@ class Fourthwall_API_Client {
      *
      * @return string|bool
      */
-    private function get_storefront_token() {
+    private function get_storefront_token()
+    {
         return get_option('fourthwall_storefront_token');
     }
 
@@ -59,49 +62,62 @@ class Fourthwall_API_Client {
      * @param array  $params   Query parameters
      * @return array|WP_Error
      */
-    private function make_request($endpoint, $params = []) {
+    private function make_request($endpoint, $params = [])
+    {
         $token = $this->get_storefront_token();
-        
+
         if (!$token) {
             return new WP_Error('no_token', __('Storefront token is not configured', 'fourthwall-products'));
         }
 
-        // Add token to params
+        // Add token to params if not already present
         $params['storefront_token'] = $token;
 
-        // Build URL
+        // Build URL with proper encoding
         $url = add_query_arg(
-            $params,
+            array_map('urlencode', $params),
             $this->base_url . $endpoint
         );
 
-        // Make request
+        // Make request with additional headers
         $response = wp_remote_get($url, [
             'timeout' => 15,
             'headers' => [
                 'Accept' => 'application/json',
+                'User-Agent' => 'WordPress/Fourthwall-Products-Plugin',
+                'Authorization' => 'Bearer ' . $token // Try adding Bearer authentication
             ],
+            'sslverify' => true // Ensure SSL verification is enabled
         ]);
 
-        // Check for errors
+        // Enhanced error logging
         if (is_wp_error($response)) {
+            error_log('Fourthwall API Error: ' . $response->get_error_message());
             return $response;
         }
 
-        // Check response code
         $response_code = wp_remote_retrieve_response_code($response);
+        $body = wp_remote_retrieve_body($response);
+
+        // Log detailed response information for debugging
+        error_log(sprintf(
+            'Fourthwall API Response [%s]: Code: %d, Body: %s',
+            $url,
+            $response_code,
+            $body
+        ));
+
         if ($response_code !== 200) {
             return new WP_Error(
                 'api_error',
                 sprintf(
-                    __('API request failed with status %d', 'fourthwall-products'),
-                    $response_code
+                    __('API request failed with status %d: %s', 'fourthwall-products'),
+                    $response_code,
+                    $body
                 )
             );
         }
 
-        // Parse response
-        $body = wp_remote_retrieve_body($response);
         $data = json_decode($body, true);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
@@ -110,13 +126,13 @@ class Fourthwall_API_Client {
 
         return $data;
     }
-
     /**
      * Get all collections
      *
      * @return array|WP_Error
      */
-    public function get_collections() {
+    public function get_collections()
+    {
         $cache_key = 'fourthwall_collections';
         $cached = get_transient($cache_key);
 
@@ -139,7 +155,8 @@ class Fourthwall_API_Client {
      * @param string $slug Collection slug
      * @return array|WP_Error
      */
-    public function get_collection($slug) {
+    public function get_collection($slug)
+    {
         $cache_key = 'fourthwall_collection_' . $slug;
         $cached = get_transient($cache_key);
 
@@ -165,7 +182,8 @@ class Fourthwall_API_Client {
      * @param int    $size     Page size
      * @return array|WP_Error
      */
-    public function get_collection_products($slug, $currency = null, $page = 1, $size = 20) {
+    public function get_collection_products($slug, $currency = null, $page = 1, $size = 20)
+    {
         $params = [
             'currency' => $currency ?: $this->default_currency,
             'page' => $page,
@@ -202,7 +220,8 @@ class Fourthwall_API_Client {
      * @param string $currency Currency code
      * @return array|WP_Error
      */
-    public function get_product($slug, $currency = null) {
+    public function get_product($slug, $currency = null)
+    {
         $params = [];
         if ($currency) {
             $params['currency'] = $currency;
@@ -229,7 +248,8 @@ class Fourthwall_API_Client {
      *
      * @return void
      */
-    public function clear_cache() {
+    public function clear_cache()
+    {
         global $wpdb;
 
         $wpdb->query(
@@ -246,7 +266,8 @@ class Fourthwall_API_Client {
      *
      * @return array
      */
-    public function get_supported_currencies() {
+    public function get_supported_currencies()
+    {
         return [
             'USD' => __('US Dollar', 'fourthwall-products'),
             'EUR' => __('Euro', 'fourthwall-products'),
